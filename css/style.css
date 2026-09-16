@@ -1,0 +1,114 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#C41E3A;
+  --dark:#111;
+  --gray:#555;
+  --light:#f5f5f5;
+  --white:#fff;
+  --radius:14px;
+  --shadow:0 8px 30px rgba(0,0,0,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--dark);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:50px;font-weight:600;font-size:14px;border:none;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#a01830}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+.btn-white{background:#fff;color:var(--red)}
+.btn-sm{padding:10px 18px;font-size:13px;background:var(--red);color:#fff;border-radius:8px}
+.btn-call{background:var(--dark);color:#fff;padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600}
+
+/* Header */
+.header{position:sticky;top:0;z-index:100;background:#fff;height:60px;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:100%;gap:16px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.5px}
+.logo span{color:var(--red)}
+.nav{display:flex;gap:22px}
+.nav a{font-size:14px;font-weight:500;opacity:.8}
+.nav a:hover{opacity:1;color:var(--red)}
+.menu-btn{display:none;background:none;border:none;font-size:24px;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;min-height:480px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.7)),url('../assets/images/cylindrical-main.jpg') center/cover no-repeat}
+.hero-content{position:relative;z-index:2;padding:60px 0;text-align:center}
+.badge{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:5px 14px;border-radius:50px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,6vw,48px);font-weight:800;line-height:1.15;margin-bottom:12px;letter-spacing:-1px}
+.subtitle{font-size:15px;opacity:.85;margin-bottom:28px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* Trust */
+.trust{background:var(--light);padding:28px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trust-item{text-align:center}
+.trust-item strong{display:block;font-size:14px;margin-bottom:2px}
+.trust-item span{font-size:12px;color:var(--gray)}
+
+/* Section */
+.section-head{text-align:center;margin-bottom:36px}
+.section-head h2{font-size:28px;font-weight:800;margin-bottom:6px}
+.section-head p{color:var(--gray);font-size:15px}
+
+/* Products */
+.products{padding:60px 0}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.tab{padding:10px 18px;border-radius:50px;border:1.5px solid #ddd;background:#fff;font-size:13px;font-weight:600;cursor:pointer;transition:.2s}
+.tab.active,.tab:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.grid{display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.grid.active{display:grid}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.12)}
+.card-img{height:200px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;position:relative;padding:16px}
+.card-img img{max-height:100%;max-width:100%;object-fit:contain}
+.cap{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:50px}
+.card-body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:16px;font-weight:700}
+.price{color:var(--red);font-weight:800;font-size:18px}
+.desc{font-size:13px;color:var(--gray);flex:1}
+
+/* Why */
+.why{padding:60px 0;background:var(--light)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.why-card{background:#fff;border-radius:var(--radius);padding:28px 20px;text-align:center;box-shadow:var(--shadow)}
+.icon{font-size:28px;margin-bottom:12px}
+.why-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.why-card p{font-size:13px;color:var(--gray)}
+
+/* CTA */
+.cta{background:var(--red);color:#fff;padding:60px 0;text-align:center}
+.cta h2{font-size:28px;font-weight:800;margin-bottom:8px}
+.cta p{opacity:.9;margin-bottom:24px}
+
+/* Contact */
+.contact{padding:60px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.contact-card{background:var(--light);border-radius:var(--radius);padding:24px;text-align:center}
+.contact-card h3{font-size:15px;margin-bottom:8px}
+.contact-card a{color:var(--red);font-weight:700;font-size:16px}
+
+/* Footer */
+.footer{background:var(--dark);color:#fff;padding:36px 0 20px}
+.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:13px;opacity:.6}
+.footer-links a:hover{opacity:1}
+.copy{font-size:12px;opacity:.4;text-align:center;border-top:1px solid rgba(255,255,255,.08);padding-top:16px}
+
+/* Float */
+.float-btn{position:fixed;bottom:24px;right:24px;width:54px;height:54px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 16px rgba(0,0,0,.2);z-index:99}
+
+/* Responsive */
+@media(max-width:768px){
+  .nav{display:none}
+  .nav.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:#fff;padding:16px 20px;gap:12px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .menu-btn{display:block}
+  .btn-call{display:none}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{min-height:400px}
+}
