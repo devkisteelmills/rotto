@@ -1,2110 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Roto Water Tanks | Premium Water Storage Kenya</title>
-
-  <meta name="description" content="Roto Water Tanks - Food-grade, UV-stabilized polyethylene tanks. Made heavier to last longer. Delivery across Kenya. Call +254 783 386 550">
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-
-    /* =====================================================
-       ADDITIONS ONLY
-       ===================================================== */
-
-    /* HERO BACKGROUND */
-    .hero {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(0, 25, 60, 0.88),
-          rgba(0, 40, 90, 0.45)
-        ),
-        url("assets/images/tank.jpeg");
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-
-    /* STRONG CALL + WHATSAPP BUTTONS */
-
-    .contact-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .call-btn,
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      padding: 15px 25px;
-
-      border-radius: 50px;
-
-      color: #ffffff;
-      text-decoration: none;
-
-      font-weight: 800;
-      font-size: 16px;
-
-      box-shadow: 0 8px 20px rgba(0,0,0,.20);
-
-      transition: all .3s ease;
-    }
-
-    .call-btn {
-      background: #075dcc;
-    }
-
-    .whatsapp-btn {
-      background: #18b957;
-    }
-
-    .call-btn:hover,
-    .whatsapp-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(0,0,0,.25);
-    }
-
-
-    /* REVIEW SECTION */
-
-    .reviews {
-      padding: 70px 0;
-
-      background:
-        linear-gradient(
-          rgba(245,249,255,.95),
-          rgba(245,249,255,.95)
-        ),
-        url("assets/images/tank2.jpeg");
-
-      background-size: cover;
-      background-position: center;
-    }
-
-    .reviews-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 25px;
-
-      margin-top: 35px;
-    }
-
-    .review-card {
-      background: #ffffff;
-
-      padding: 30px;
-
-      border-radius: 18px;
-
-      box-shadow:
-        0 8px 25px rgba(0,0,0,.08);
-
-      border: 1px solid #e2ebf5;
-    }
-
-    .review-stars {
-      color: #f5a900;
-
-      font-size: 21px;
-
-      letter-spacing: 2px;
-
-      margin-bottom: 15px;
-    }
-
-    .review-card p {
-      line-height: 1.7;
-
-      color: #555;
-
-      margin: 0;
-    }
-
-    .review-name {
-      margin-top: 18px;
-
-      font-weight: 800;
-
-      color: #073b78;
-    }
-
-    .review-location {
-      font-size: 13px;
-
-      color: #777;
-
-      margin-top: 4px;
-    }
-
-
-    /* FAQ SECTION */
-
-    .faq {
-      padding: 70px 0;
-
-      background: #ffffff;
-    }
-
-    .faq-list {
-      max-width: 900px;
-
-      margin: 35px auto 0;
-    }
-
-    .faq-item {
-      border-bottom:
-        1px solid #dce5ef;
-    }
-
-    .faq-item summary {
-      cursor: pointer;
-
-      padding: 20px 10px;
-
-      font-weight: 700;
-
-      color: #073b78;
-
-      font-size: 16px;
-
-      list-style: none;
-
-      position: relative;
-
-      padding-right: 45px;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-
-      position: absolute;
-
-      right: 10px;
-
-      font-size: 25px;
-
-      font-weight: 500;
-    }
-
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-
-    .faq-item p {
-      padding: 0 10px 20px;
-
-      color: #555;
-
-      line-height: 1.7;
-    }
-
-
-    /* FLOATING WHATSAPP */
-
-    .float-whatsapp {
-      position: fixed;
-
-      right: 20px;
-
-      bottom: 20px;
-
-      width: 62px;
-
-      height: 62px;
-
-      border-radius: 50%;
-
-      background: #18b957;
-
-      color: white;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: 29px;
-
-      text-decoration: none;
-
-      box-shadow:
-        0 8px 25px rgba(0,0,0,.25);
-
-      z-index: 9999;
-
-      transition: .3s ease;
-    }
-
-    .float-whatsapp:hover {
-      transform: scale(1.08);
-    }
-
-
-    /* STRONG CTA AREA */
-
-    .cta-buttons {
-      display: flex;
-
-      justify-content: center;
-
-      gap: 15px;
-
-      flex-wrap: wrap;
-
-      margin-top: 20px;
-    }
-
-
-    /* PRODUCT BACKGROUND DETAILS */
-
-    .products {
-      position: relative;
-      background-color: #ffffff;
-    }
-
-    .why {
-      position: relative;
-
-      background:
-        linear-gradient(
-          rgba(245,249,255,.94),
-          rgba(245,249,255,.94)
-        ),
-        url("assets/images/tank3.jpeg");
-
-      background-size: cover;
-      background-position: center;
-    }
-
-
-    /* MOBILE */
-
-    @media (max-width: 768px) {
-
-      .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-buttons {
-        flex-direction: column;
-      }
-
-      .call-btn,
-      .whatsapp-btn {
-        width: 100%;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .float-whatsapp {
-        width: 58px;
-        height: 58px;
-
-        right: 15px;
-        bottom: 15px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roto Tank Shop Kenya | Water Tanks, Septic Tanks & HDPE Drums</title>
+
+<meta name="description" content="Roto Tank Shop Kenya - Quality water tanks, underground tanks, septic tanks, HDPE drums and water storage solutions. Call or WhatsApp us today.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --roto-blue:#0066a6;
+  --roto-dark:#003b63;
+  --roto-light:#eaf7ff;
+  --roto-cyan:#00a8e8;
+  --white:#ffffff;
+  --dark:#10202d;
+  --gold:#f4b942;
+  --shadow:0 12px 35px rgba(0,45,75,.15);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  color:var(--dark);
+  background:#f7fbfd;
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  box-shadow:0 5px 25px rgba(0,0,0,.10);
+  border-bottom:3px solid var(--roto-blue);
+}
+
+.header-inner{
+  min-height:105px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo img{
+  width:175px;
+  height:auto;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav a{
+  font-weight:700;
+  font-size:14px;
+  color:var(--roto-dark);
+  transition:.3s;
+}
+
+.nav a:hover{
+  color:var(--roto-cyan);
+}
+
+.header-buttons{
+  display:flex;
+  gap:10px;
+}
+
+.header-call,
+.header-whatsapp{
+  padding:12px 18px;
+  border-radius:30px;
+  color:white;
+  font-weight:800;
+  font-size:13px;
+}
+
+.header-call{
+  background:var(--roto-dark);
+}
+
+.header-whatsapp{
+  background:#25D366;
+}
+
+.menu-btn{
+  display:none;
+  font-size:30px;
+  background:none;
+  border:0;
+  color:var(--roto-dark);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:600px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,35,60,.92),rgba(0,65,105,.68),rgba(0,0,0,.20)),
+    url("assets/images/tank1.jpeg") center/cover no-repeat;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  padding:90px 0;
+  max-width:800px;
+}
+
+.hero-label{
+  display:inline-block;
+  background:var(--roto-cyan);
+  padding:9px 18px;
+  border-radius:30px;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.05;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#64d7ff;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:680px;
+  margin-bottom:32px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 25px;
+  border-radius:8px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:var(--roto-cyan);
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-white{
+  background:white;
+  color:var(--roto-dark);
+}
+
+.btn-whatsapp{
+  background:#25D366;
+  color:white;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description{
+  padding:75px 0;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(239,249,255,.94),rgba(239,249,255,.94)),
+    url("assets/images/tank2.jpeg") center/cover;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  color:var(--roto-dark);
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.15;
+}
+
+.section-title p{
+  margin-top:10px;
+  color:#587080;
+}
+
+.description-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.description-text h3{
+  font-size:27px;
+  color:var(--roto-blue);
+  margin-bottom:15px;
+}
+
+.description-text p{
+  margin-bottom:15px;
+}
+
+.description-image{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:white;
+}
+
+.description-image img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+  padding:80px 0;
+  background:
+    linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.96)),
+    url("assets/images/tank3.jpeg") center/cover fixed;
+}
+
+.category-title{
+  margin:55px 0 25px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.category-title h3{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:var(--roto-dark);
+}
+
+.category-title::after{
+  content:"";
+  height:3px;
+  background:var(--roto-cyan);
+  flex:1;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.product-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 7px 25px rgba(0,50,80,.10);
+  border:1px solid #e2edf3;
+  transition:.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.product-image{
+  height:230px;
+  position:relative;
+  overflow:hidden;
+  background:#edf8fc;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.product-card:hover img{
+  transform:scale(1.05);
+}
+
+.capacity{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:var(--roto-blue);
+  color:white;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.product-body{
+  padding:20px;
+}
+
+.product-body h4{
+  font-size:17px;
+  color:var(--roto-dark);
+  min-height:48px;
+}
+
+.price{
+  color:var(--roto-blue);
+  font-size:21px;
+  font-weight:900;
+  margin:7px 0;
+}
+
+.order-btn{
+  display:block;
+  text-align:center;
+  margin-top:15px;
+  background:var(--roto-dark);
+  color:white;
+  padding:11px;
+  border-radius:7px;
+  font-weight:800;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+  padding:80px 0;
+  background:
+    linear-gradient(rgba(0,51,83,.93),rgba(0,51,83,.93)),
+    url("assets/images/tank4.jpeg") center/cover fixed;
+  color:white;
+}
+
+.reviews .section-title h2{
+  color:white;
+}
+
+.reviews .section-title p{
+  color:#d9edf8;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.review{
+  background:white;
+  color:var(--dark);
+  border-radius:16px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.stars{
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.review p{
+  font-style:italic;
+  margin-bottom:20px;
+}
+
+.reviewer{
+  font-weight:900;
+  color:var(--roto-dark);
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+  padding:80px 0;
+  background:#f0f9fd;
+}
+
+.faq-container{
+  max-width:900px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  margin-bottom:13px;
+  border-radius:10px;
+  box-shadow:0 5px 18px rgba(0,60,90,.08);
+  overflow:hidden;
+}
+
+summary{
+  cursor:pointer;
+  padding:21px;
+  font-weight:800;
+  color:var(--roto-dark);
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary::after{
+  content:"+";
+  float:right;
+  font-size:22px;
+  color:var(--roto-blue);
+}
+
+details[open] summary::after{
+  content:"−";
+}
+
+details p{
+  padding:0 21px 21px;
+  color:#536875;
+}
+
+/* ================= CONTACT ACTIONS ================= */
+
+.contact-actions{
+  padding:80px 0;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(0,51,83,.94),rgba(0,102,166,.94)),
+    url("assets/images/tank5.jpeg") center/cover;
+}
+
+.contact-actions h2{
+  font-family:'Playfair Display',serif;
+  font-size:45px;
+  margin-bottom:12px;
+}
+
+.contact-actions p{
+  margin-bottom:30px;
+}
+
+.big-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.big-btn{
+  min-width:240px;
+  padding:18px 28px;
+  border-radius:8px;
+  color:white;
+  font-size:17px;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.call-big{
+  background:#0b4169;
+}
+
+.whatsapp-big{
+  background:#25D366;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  background:#071b29;
+  color:white;
+  padding:45px 0 20px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.footer-logo{
+  width:170px;
+  background:white;
+  border-radius:8px;
+  padding:5px;
+}
+
+.footer p{
+  color:#a9c1cf;
+  margin-top:10px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  font-weight:700;
+  color:#d9edf8;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:30px;
+  padding-top:20px;
+  text-align:center;
+  color:#9eb5c2;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:25px;
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+
+.float-call{
+  background:var(--roto-dark);
+}
+
+.float-whatsapp{
+  background:#25D366;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+  .nav,
+  .header-buttons{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .description-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .header-inner{
+    min-height:80px;
+  }
+
+  .logo img{
+    width:135px;
+  }
+
+  .hero{
+    min-height:570px;
+  }
+
+  .hero-content{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-image{
+    height:165px;
+  }
+
+  .product-body{
+    padding:13px;
+  }
+
+  .product-body h4{
+    font-size:14px;
+    min-height:auto;
+  }
+
+  .price{
+    font-size:17px;
+  }
+
+  .order-btn{
+    font-size:12px;
+    padding:9px;
+  }
+
+  .category-title h3{
+    font-size:25px;
+  }
+
+  .contact-actions h2{
+    font-size:34px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+/* ================= MOBILE MENU ================= */
+
+@media(max-width:950px){
+
+  .nav.mobile-open{
+    display:flex;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+  }
+
+  .nav.mobile-open a{
+    padding:10px;
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header class="header">
-
   <div class="container header-inner">
 
     <a href="#home" class="logo">
-      ROTO <span>TANKS</span>
+      <img src="assets/images/logo.png" alt="Roto Tanks Logo">
     </a>
 
     <nav class="nav" id="nav">
-
       <a href="#home">Home</a>
-
       <a href="#products">Products</a>
-
-      <a href="#why">Why Us</a>
-
       <a href="#reviews">Reviews</a>
-
       <a href="#faq">FAQs</a>
-
       <a href="#contact">Contact</a>
-
     </nav>
 
-    <a
-      href="tel:+254783386550"
-      class="btn-call">
+    <div class="header-buttons">
+      <a href="tel:+254783386550" class="header-call">CALL</a>
+      <a href="https://wa.me/254783386550" class="header-whatsapp">WHATSAPP</a>
+    </div>
 
-      📞 Call Now
-
-    </a>
-
-    <button
-      class="menu-btn"
-      id="menuBtn">
-
-      ☰
-
-    </button>
+    <button class="menu-btn" id="menuBtn">☰</button>
 
   </div>
-
 </header>
 
 
+<!-- ================= HERO ================= -->
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
-
-<section
-  class="hero"
-  id="home">
-
-  <div class="hero-bg"></div>
+<section class="hero" id="home">
 
   <div class="container hero-content">
 
-    <p class="badge">
-      Trusted Across Kenya
-    </p>
+    <div class="hero-label">ROTO TANK SHOP • KENYA</div>
 
     <h1>
-      Premium Water Storage<br>
-      Solutions Built to Last
+      Quality Water Storage
+      <span>Built To Last.</span>
     </h1>
 
-    <p class="subtitle">
-      Food-grade • UV-stabilized • Made Heavier to Last Longer
-    </p>
-
-    <div class="hero-btns">
-
-      <a
-        href="#products"
-        class="btn btn-primary">
-
-        View Products
-
-      </a>
-
-      <a
-        href="tel:+254783386550"
-        class="btn btn-outline">
-
-        📞 +254 783 386 550
-
-      </a>
-
-    </div>
-
-
-    <!-- NEW STRONG CONTACT BUTTONS -->
-
-    <div class="contact-buttons">
-
-      <a
-        href="tel:+254783386550"
-        class="call-btn">
-
-        📞 CALL ROTO NOW
-
-      </a>
-
-      <a
-        href="https://wa.me/254783386550?text=Hello%20Roto%20Water%20Tanks,%20I%20would%20like%20to%20order%20a%20water%20tank."
-        target="_blank"
-        class="whatsapp-btn">
-
-        💬 WHATSAPP US
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TRUST
-     ===================================================== -->
-
-<section class="trust">
-
-  <div class="container trust-grid">
-
-    <div class="trust-item">
-
-      <strong>
-        ✓ Food Grade
-      </strong>
-
-      <span>
-        Safe for drinking water
-      </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <strong>
-        ☀ UV Stabilized
-      </strong>
-
-      <span>
-        Resists harsh sun
-      </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <strong>
-        🚚 Nationwide
-      </strong>
-
-      <span>
-        Delivery across Kenya
-      </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <strong>
-        🛡️ Longer Life
-      </strong>
-
-      <span>
-        Made heavier & stronger
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PRODUCTS
-     ===================================================== -->
-
-<section
-  class="products"
-  id="products">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <h2>
-        Our Products
-      </h2>
-
-      <p>
-        High-quality tanks for homes, farms, schools & industries
-      </p>
-
-    </div>
-
-
-    <!-- TABS -->
-
-    <div class="tabs">
-
-      <button
-        class="tab active"
-        data-tab="cylindrical">
-
-        Cylindrical
-
-      </button>
-
-      <button
-        class="tab"
-        data-tab="specialty">
-
-        Specialty
-
-      </button>
-
-      <button
-        class="tab"
-        data-tab="underground">
-
-        Underground & Septic
-
-      </button>
-
-      <button
-        class="tab"
-        data-tab="drums">
-
-        Drums & Bins
-
-      </button>
-
-    </div>
-
-
-
-    <!-- =================================================
-         CYLINDRICAL
-         ================================================= -->
-
-    <div
-      class="grid active"
-      id="cylindrical">
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank.jpeg"
-            alt="Roto 1000 Litres Water Tank">
-
-          <span class="cap">
-            1,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            1,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 5,500
-          </p>
-
-          <p class="desc">
-            Strong cylindrical tank for homes and residential use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank2.jpeg"
-            alt="Roto 2000 Litres Water Tank">
-
-          <span class="cap">
-            2,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            2,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 10,500
-          </p>
-
-          <p class="desc">
-            Ideal for medium-sized families and residential use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank3.jpeg"
-            alt="Roto 3000 Litres Water Tank">
-
-          <span class="cap">
-            3,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            3,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 13,500
-          </p>
-
-          <p class="desc">
-            Popular for homes, farms and small businesses.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank4.jpeg"
-            alt="Roto 4000 Litres Water Tank">
-
-          <span class="cap">
-            4,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            4,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 20,500
-          </p>
-
-          <p class="desc">
-            Large water storage solution for homes and farms.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank5.jpeg"
-            alt="Roto 5000 Litres Water Tank">
-
-          <span class="cap">
-            5,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            5,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 35,000
-          </p>
-
-          <p class="desc">
-            Suitable for large homes, farms and commercial use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank6.jpeg"
-            alt="Roto 6000 Litres Water Tank">
-
-          <span class="cap">
-            6,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            6,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 40,500
-          </p>
-
-          <p class="desc">
-            High-capacity storage for farms and commercial use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank7.jpeg"
-            alt="Roto 8000 Litres Water Tank">
-
-          <span class="cap">
-            8,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            8,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 50,500
-          </p>
-
-          <p class="desc">
-            Large capacity tank for farms, schools and institutions.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank8.jpeg"
-            alt="Roto 10000 Litres Water Tank">
-
-          <span class="cap">
-            10,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            10,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 80,000
-          </p>
-
-          <p class="desc">
-            Excellent large-scale water storage solution.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank.jpeg"
-            alt="Roto 16000 Litres Water Tank">
-
-          <span class="cap">
-            16,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            16,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 158,500
-          </p>
-
-          <p class="desc">
-            Maximum capacity for agriculture, industry and community use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/tank2.jpeg"
-            alt="Roto 24000 Litres Water Tank">
-
-          <span class="cap">
-            24,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            24,000 Litres Cylindrical Tank
-          </h3>
-
-          <p class="price">
-            Ksh 214,500
-          </p>
-
-          <p class="desc">
-            Very large-capacity water storage for major projects.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- 60L -->
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/cyl-60.png"
-            alt="60L Cylindrical Tank With Tap">
-
-          <span class="cap">
-            60L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Cylindrical Tank With Tap
-          </h3>
-
-          <p class="price">
-            Ksh 4,620
-          </p>
-
-          <p class="desc">
-            Compact tank with convenient tap.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- 100L -->
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/cyl-100.png"
-            alt="100L Cylindrical Tank With Tap">
-
-          <span class="cap">
-            100L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Cylindrical Tank With Tap
-          </h3>
-
-          <p class="price">
-            Ksh 5,060
-          </p>
-
-          <p class="desc">
-            Ideal for small households and convenient water storage.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-
-    <!-- =================================================
-         SPECIALTY
-         ================================================= -->
-
-    <div
-      class="grid"
-      id="specialty">
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/hopper.png"
-            alt="Hopper Tank">
-
-          <span class="cap">
-            4,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Hopper Tank JHTO3
-          </h3>
-
-          <p class="price">
-            Ksh 84,100
-          </p>
-
-          <p class="desc">
-            Conical bottom design for complete drainage.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/silo.jpg"
-            alt="Silo Tank">
-
-          <span class="cap">
-            1,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Silo Tank SLO1
-          </h3>
-
-          <p class="price">
-            Ksh 15,015
-          </p>
-
-          <p class="desc">
-            Vertical design for efficient space usage.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/trailer.jpg"
-            alt="Trailer Tank">
-
-          <span class="cap">
-            200L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Trailer Tank RTTO1
-          </h3>
-
-          <p class="price">
-            Ksh 4,550
-          </p>
-
-          <p class="desc">
-            Horizontal tank designed for mobile water transport.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/ball-handwash.png"
-            alt="Ball Handwash Tank">
-
-          <span class="cap">
-            60L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Ball Handwash
-          </h3>
-
-          <p class="price">
-            Ksh 6,050
-          </p>
-
-          <p class="desc">
-            Spherical handwashing tank with tap.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/square-tank.jpg"
-            alt="Square Tank With Tap">
-
-          <span class="cap">
-            100L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Square Tank With Tap
-          </h3>
-
-          <p class="price">
-            Ksh 5,060
-          </p>
-
-          <p class="desc">
-            Space-saving rectangular design with tap.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/ball-roller.png"
-            alt="Ball Roller">
-
-          <span class="cap">
-            90L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Ball Roller RBR
-          </h3>
-
-          <p class="price">
-            Ksh 7,650
-          </p>
-
-          <p class="desc">
-            Portable water storage with handle for movement.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-
-    <!-- =================================================
-         UNDERGROUND & SEPTIC
-         ================================================= -->
-
-    <div
-      class="grid"
-      id="underground">
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/underground.webp"
-            alt="2000L Underground Tank">
-
-          <span class="cap">
-            2,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Underground Tank 2,000L
-          </h3>
-
-          <p class="price">
-            Ksh 22,215
-          </p>
-
-          <p class="desc">
-            Heavy-duty underground water storage solution.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/underground2.webp"
-            alt="5000L Underground Tank">
-
-          <span class="cap">
-            5,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Underground Tank 5,000L
-          </h3>
-
-          <p class="price">
-            Ksh 55,000
-          </p>
-
-          <p class="desc">
-            Larger underground storage for homes and commercial use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/underground3.webp"
-            alt="10000L Underground Tank">
-
-          <span class="cap">
-            10,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Underground Tank 10,000L
-          </h3>
-
-          <p class="price">
-            Ksh 95,000
-          </p>
-
-          <p class="desc">
-            Large underground storage for commercial requirements.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/septic.jpg"
-            alt="3000L Horizontal Septic Tank">
-
-          <span class="cap">
-            3,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Horizontal Septic Tank 3,000L
-          </h3>
-
-          <p class="price">
-            Ksh 72,500
-          </p>
-
-          <p class="desc">
-            Reliable septic solution for homes and institutions.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/septic2.jpg"
-            alt="5000L Horizontal Septic Tank">
-
-          <span class="cap">
-            5,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Horizontal Septic Tank 5,000L
-          </h3>
-
-          <p class="price">
-            Ksh 98,000
-          </p>
-
-          <p class="desc">
-            Larger septic solution for bigger households and institutions.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/septic3.jpg"
-            alt="10000L Horizontal Septic Tank">
-
-          <span class="cap">
-            10,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Horizontal Septic Tank 10,000L
-          </h3>
-
-          <p class="price">
-            Ksh 140,978
-          </p>
-
-          <p class="desc">
-            High-capacity septic solution for commercial use.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/underground4.png"
-            alt="16000L Underground Tank">
-
-          <span class="cap">
-            16,000L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            Underground Tank 16,000L
-          </h3>
-
-          <p class="price">
-            Ksh 146,758
-          </p>
-
-          <p class="desc">
-            High-capacity underground storage for major requirements.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-
-    <!-- =================================================
-         DRUMS & BINS
-         ================================================= -->
-
-    <div
-      class="grid"
-      id="drums">
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/drum.jpeg"
-            alt="310L HDPE Drum">
-
-          <span class="cap">
-            310L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            310 Litres HDPE Drum
-          </h3>
-
-          <p class="price">
-            Ksh 2,000
-          </p>
-
-          <p class="desc">
-            Large-capacity HDPE drum for storage and transport.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/drum2.jpeg"
-            alt="250L HDPE Drum">
-
-          <span class="cap">
-            250L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            250 Litres HDPE Drum
-          </h3>
-
-          <p class="price">
-            Ksh 1,500
-          </p>
-
-          <p class="desc">
-            Durable HDPE drum for general storage requirements.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/drum3.jpeg"
-            alt="200L HDPE Drum">
-
-          <span class="cap">
-            200L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            200 Litres HDPE Drum
-          </h3>
-
-          <p class="price">
-            Ksh 1,000
-          </p>
-
-          <p class="desc">
-            Popular size for general storage and transport.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="card-img">
-
-          <img
-            src="assets/images/drum4.jpeg"
-            alt="210L HDPE Drum">
-
-          <span class="cap">
-            210L
-          </span>
-
-        </div>
-
-        <div class="card-body">
-
-          <h3>
-            210 Litres HDPE Drum
-          </h3>
-
-          <p class="price">
-            Ksh 1,250
-          </p>
-
-          <p class="desc">
-            Strong HDPE drum for storage and transportation.
-          </p>
-
-          <a
-            href="tel:+254783386550"
-            class="btn btn-sm">
-
-            Order Now
-
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHY US
-     ===================================================== -->
-
-<section
-  class="why"
-  id="why">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <h2>
-        Why Choose Roto Tanks?
-      </h2>
-
-      <p>
-        Quality, durability and value you can trust
-      </p>
-
-    </div>
-
-
-    <div class="why-grid">
-
-      <div class="why-card">
-
-        <div class="icon">
-          🛡️
-        </div>
-
-        <h3>
-          Food-Grade Material
-        </h3>
-
-        <p>
-          Safe for drinking water. UV-stabilized polyethylene.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="icon">
-          💪
-        </div>
-
-        <h3>
-          Made Heavier
-        </h3>
-
-        <p>
-          Thicker walls for longer life under Kenya’s sun.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="icon">
-          🚚
-        </div>
-
-        <h3>
-          Fast Delivery
-        </h3>
-
-        <p>
-          Nationwide delivery to all major towns.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="icon">
-          💰
-        </div>
-
-        <h3>
-          Fair Pricing
-        </h3>
-
-        <p>
-          Competitive prices without compromising quality.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     REVIEWS
-     ===================================================== -->
-
-<section
-  class="reviews"
-  id="reviews">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <h2>
-        What Our Customers Say
-      </h2>
-
-      <p>
-        Trusted by customers across Kenya
-      </p>
-
-    </div>
-
-
-    <div class="reviews-grid">
-
-
-      <div class="review-card">
-
-        <div class="review-stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “The tank is very strong and the quality is excellent.
-          Delivery was fast and everything arrived safely.”
-        </p>
-
-        <div class="review-name">
-          John Mwangi
-        </div>
-
-        <div class="review-location">
-          Nairobi, Kenya
-        </div>
-
-      </div>
-
-
-
-      <div class="review-card">
-
-        <div class="review-stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “I ordered a water tank for our farm and the service
-          was very good. The team was helpful from ordering to delivery.”
-        </p>
-
-        <div class="review-name">
-          Mary Wanjiku
-        </div>
-
-        <div class="review-location">
-          Kiambu, Kenya
-        </div>
-
-      </div>
-
-
-
-      <div class="review-card">
-
-        <div class="review-stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “Good quality tank at a reasonable price. The tank looks
-          strong and exactly what I needed for my home.”
-        </p>
-
-        <div class="review-name">
-          Peter Otieno
-        </div>
-
-        <div class="review-location">
-          Kisumu, Kenya
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     STRONG CTA
-     ===================================================== -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <h2>
-      Ready to Order Your Tank?
-    </h2>
-
     <p>
-      Call or WhatsApp for fast delivery across Kenya
+      Premium Roto water tanks, underground tanks, septic tanks,
+      HDPE drums and storage solutions for homes, farms,
+      institutions and businesses across Kenya.
     </p>
 
+    <div class="hero-actions">
 
-    <div class="cta-buttons">
-
-      <a
-        href="tel:+254783386550"
-        class="call-btn">
-
-        📞 CALL NOW
-        <br>
-        +254 783 386 550
-
+      <a href="#products" class="btn btn-primary">
+        VIEW PRODUCTS
       </a>
 
-
-      <a
-        href="https://wa.me/254783386550?text=Hello%20Roto%20Water%20Tanks,%20I%20would%20like%20to%20order%20a%20tank."
-        target="_blank"
-        class="whatsapp-btn">
-
+      <a href="https://wa.me/254783386550" class="btn btn-whatsapp">
         💬 WHATSAPP US
-
       </a>
 
     </div>
@@ -2114,137 +787,50 @@
 </section>
 
 
+<!-- ================= DESCRIPTION ================= -->
 
-<!-- =====================================================
-     FAQ
-     ===================================================== -->
-
-<section
-  class="faq"
-  id="faq">
+<section class="description">
 
   <div class="container">
 
-    <div class="section-head">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-      <p>
-        Quick answers about our tanks and services
-      </p>
-
+    <div class="section-title">
+      <h2>ROTO TANK SHOP</h2>
+      <p>Reliable water storage solutions for Kenya</p>
     </div>
 
+    <div class="description-grid">
 
-    <div class="faq-list">
+      <div class="description-text">
 
-
-      <details class="faq-item">
-
-        <summary>
-          Are Roto tanks safe for drinking water?
-        </summary>
+        <h3>Made Heavier. Built For Longer Life.</h3>
 
         <p>
-          Our water tanks are made from food-grade material
-          suitable for water storage.
+          We supply a wide range of quality Roto water storage
+          products designed for residential, agricultural,
+          commercial and institutional applications.
         </p>
-
-      </details>
-
-
-
-      <details class="faq-item">
-
-        <summary>
-          Do you deliver water tanks across Kenya?
-        </summary>
 
         <p>
-          Yes. We arrange delivery to customers across Kenya.
-          Contact us with your location for delivery information.
+          Choose from cylindrical water tanks, underground tanks,
+          septic tanks, hopper tanks, silo tanks, trailer tanks,
+          handwash tanks, ball rollers and HDPE drums.
         </p>
-
-      </details>
-
-
-
-      <details class="faq-item">
-
-        <summary>
-          What sizes of tanks do you have?
-        </summary>
 
         <p>
-          We have tanks ranging from small household sizes
-          to large-capacity tanks for farms, institutions
-          and commercial projects.
+          Our products are available in different capacities,
+          giving you a practical storage solution for almost
+          every requirement.
         </p>
 
-      </details>
+        <a href="#products" class="btn btn-primary">
+          EXPLORE OUR PRODUCTS
+        </a>
 
+      </div>
 
-
-      <details class="faq-item">
-
-        <summary>
-          How can I order a tank?
-        </summary>
-
-        <p>
-          Call us or contact us through WhatsApp. Tell us
-          the tank size you need and your delivery location.
-        </p>
-
-      </details>
-
-
-
-      <details class="faq-item">
-
-        <summary>
-          Do you have underground and septic tanks?
-        </summary>
-
-        <p>
-          Yes. We offer underground tanks and horizontal
-          septic tanks in different capacities.
-        </p>
-
-      </details>
-
-
-
-      <details class="faq-item">
-
-        <summary>
-          Do you sell HDPE drums?
-        </summary>
-
-        <p>
-          Yes. We have HDPE drums in 200L, 210L, 250L
-          and 310L sizes.
-        </p>
-
-      </details>
-
-
-
-      <details class="faq-item">
-
-        <summary>
-          Can I order several tanks?
-        </summary>
-
-        <p>
-          Yes. Contact us with the quantities and sizes
-          required for your order.
-        </p>
-
-      </details>
-
+      <div class="description-image">
+        <img src="assets/images/tank2.jpeg" alt="Roto Water Tank">
+      </div>
 
     </div>
 
@@ -2253,174 +839,631 @@
 </section>
 
 
+<!-- ================= PRODUCTS ================= -->
 
-<!-- =====================================================
-     CONTACT
-     ===================================================== -->
+<section class="products" id="products">
 
-<section
-  class="contact"
-  id="contact">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+  <h2>Our Products & Prices</h2>
+  <p>Quality Roto products at competitive prices</p>
+</div>
 
-    <div class="section-head">
 
-      <h2>
-        Contact Us
-      </h2>
+<!-- CYLINDRICAL -->
 
-      <p>
-        Reach us anytime for quotes and orders
-      </p>
+<div class="category-title">
+  <h3>Cylindrical Water Tanks</h3>
+</div>
 
+<div class="product-grid">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank1.jpeg" alt="1000L Roto Tank">
+      <span class="capacity">1,000L</span>
     </div>
-
-
-    <div class="contact-grid">
-
-
-      <div class="contact-card">
-
-        <h3>
-          📞 Phone / WhatsApp
-        </h3>
-
-        <a href="tel:+254783386550">
-          +254 783 386 550
-        </a>
-
-        <br><br>
-
-        <a
-          href="https://wa.me/254783386550?text=Hello%20Roto%20Water%20Tanks,%20I%20need%20more%20information."
-          target="_blank"
-          class="whatsapp-btn">
-
-          💬 WhatsApp Us
-
-        </a>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          📍 Location
-        </h3>
-
-        <p>
-          Nairobi, Kenya • Countrywide delivery
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-card">
-
-        <h3>
-          🕒 Hours
-        </h3>
-
-        <p>
-          Mon – Sat • 8:00 AM – 6:00 PM
-        </p>
-
-      </div>
-
-
+    <div class="product-body">
+      <h4>1,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 5,500</div>
+      <a href="https://wa.me/254783386550?text=I%20want%20the%201000L%20Roto%20Tank" class="order-btn">ORDER NOW</a>
     </div>
+  </article>
 
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank2.jpeg" alt="2000L Roto Tank">
+      <span class="capacity">2,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>2,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 10,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank3.jpeg" alt="3000L Roto Tank">
+      <span class="capacity">3,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>3,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 13,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank4.jpeg" alt="4000L Roto Tank">
+      <span class="capacity">4,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>4,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 20,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank5.jpeg" alt="5000L Roto Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>5,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 35,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank6.jpeg" alt="6000L Roto Tank">
+      <span class="capacity">6,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>6,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 40,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank7.jpeg" alt="8000L Roto Tank">
+      <span class="capacity">8,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>8,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 50,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank8.jpeg" alt="10000L Roto Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>10,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 80,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank9.jpeg" alt="16000L Roto Tank">
+      <span class="capacity">16,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>16,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 158,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank10.jpeg" alt="24000L Roto Tank">
+      <span class="capacity">24,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>24,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 214,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- SPECIALTY -->
+
+<div class="category-title">
+  <h3>Specialty Tanks</h3>
+</div>
+
+<div class="product-grid">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank11.jpeg" alt="Hopper Tank">
+      <span class="capacity">4,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Hopper Tank</h4>
+      <div class="price">KSh 84,100</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank12.jpeg" alt="Silo Tank">
+      <span class="capacity">1,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Silo Tank</h4>
+      <div class="price">KSh 15,015</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank13.jpeg" alt="Ball Roller">
+      <span class="capacity">90L</span>
+    </div>
+    <div class="product-body">
+      <h4>Ball Roller</h4>
+      <div class="price">KSh 7,650</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank14.jpeg" alt="Trailer Tank">
+      <span class="capacity">200L</span>
+    </div>
+    <div class="product-body">
+      <h4>Trailer Tank</h4>
+      <div class="price">KSh 4,550</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank15.jpeg" alt="Ball Handwash">
+      <span class="capacity">60L</span>
+    </div>
+    <div class="product-body">
+      <h4>Ball Handwash</h4>
+      <div class="price">KSh 6,050</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank16.jpeg" alt="Cylindrical Tank With Tap">
+      <span class="capacity">60L</span>
+    </div>
+    <div class="product-body">
+      <h4>Cylindrical Tank With Tap – 60L</h4>
+      <div class="price">KSh 4,620</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank17.jpeg" alt="Cylindrical Tank With Tap 100L">
+      <span class="capacity">100L</span>
+    </div>
+    <div class="product-body">
+      <h4>Cylindrical Tank With Tap – 100L</h4>
+      <div class="price">KSh 5,060</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- UNDERGROUND -->
+
+<div class="category-title">
+  <h3>Underground Tanks</h3>
+</div>
+
+<div class="product-grid">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground1.webp" alt="2000L Underground Tank">
+      <span class="capacity">2,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 2,000L</h4>
+      <div class="price">KSh 22,215</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground2.webp" alt="5000L Underground Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 5,000L</h4>
+      <div class="price">KSh 55,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground3.webp" alt="10000L Underground Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 10,000L</h4>
+      <div class="price">KSh 95,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground4.png" alt="16000L Underground Tank">
+      <span class="capacity">16,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 16,000L</h4>
+      <div class="price">KSh 146,758</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- SEPTIC -->
+
+<div class="category-title">
+  <h3>Horizontal Septic Tanks</h3>
+</div>
+
+<div class="product-grid">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic1.jpg" alt="3000L Septic Tank">
+      <span class="capacity">3,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 3,000L</h4>
+      <div class="price">KSh 72,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic2.jpg" alt="5000L Septic Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 5,000L</h4>
+      <div class="price">KSh 98,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic3.jpg" alt="10000L Septic Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 10,000L</h4>
+      <div class="price">KSh 140,978</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+</div>
+
+
+<!-- DRUMS -->
+
+<div class="category-title">
+  <h3>HDPE Drums</h3>
+</div>
+
+<div class="product-grid">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum1.jpeg" alt="310L HDPE Drum">
+      <span class="capacity">310L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 310 Litres</h4>
+      <div class="price">KSh 2,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum2.jpeg" alt="250L HDPE Drum">
+      <span class="capacity">250L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 250 Litres</h4>
+      <div class="price">KSh 1,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum3.jpeg" alt="200L HDPE Drum">
+      <span class="capacity">200L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 200 Litres</h4>
+      <div class="price">KSh 1,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum4.jpeg" alt="210L HDPE Drum">
+      <span class="capacity">210L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 210 Litres</h4>
+      <div class="price">KSh 1,250</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+  <h2>What Our Customers Say</h2>
+  <p>Trusted by customers looking for reliable water storage solutions</p>
+</div>
+
+<div class="review-grid">
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "The tank arrived in good condition and delivery was very smooth.
+      The quality is exactly what I was looking for."
+    </p>
+    <div class="reviewer">— Verified Customer</div>
   </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "Very helpful service. I was guided on the right tank size
+      for my home and the ordering process was easy."
+    </p>
+    <div class="reviewer">— Happy Customer</div>
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "Good communication and reliable delivery. I would recommend
+      Roto Tank Shop to anyone looking for a water tank."
+    </p>
+    <div class="reviewer">— Roto Customer</div>
+  </div>
+
+</div>
+
+</div>
 
 </section>
 
 
+<!-- ================= FAQ ================= -->
 
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+  <h2>Frequently Asked Questions</h2>
+  <p>Everything you need to know before ordering</p>
+</div>
+
+<div class="faq-container">
+
+<details>
+  <summary>Do you deliver across Kenya?</summary>
+  <p>
+    Yes. Contact us with your location and the product you need
+    so we can arrange delivery.
+  </p>
+</details>
+
+<details>
+  <summary>Which tank size should I buy?</summary>
+  <p>
+    The right capacity depends on your household, business,
+    farm or institution's water requirements. Contact us for
+    assistance choosing a suitable size.
+  </p>
+</details>
+
+<details>
+  <summary>Do you sell underground tanks?</summary>
+  <p>
+    Yes. We supply underground tanks in 2,000L, 5,000L,
+    10,000L and 16,000L capacities.
+  </p>
+</details>
+
+<details>
+  <summary>Do you sell septic tanks?</summary>
+  <p>
+    Yes. Horizontal septic tanks are available in 3,000L,
+    5,000L and 10,000L capacities.
+  </p>
+</details>
+
+<details>
+  <summary>Can I order through WhatsApp?</summary>
+  <p>
+    Yes. Click the WhatsApp button and send us the product
+    and capacity you require.
+  </p>
+</details>
+
+<details>
+  <summary>Are the prices current?</summary>
+  <p>
+    Prices displayed on the website are the listed prices.
+    Please contact us before payment to confirm current
+    availability and delivery charges.
+  </p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CALL + WHATSAPP ================= -->
+
+<section class="contact-actions" id="contact">
+
+<div class="container">
+
+<h2>Ready To Order?</h2>
+
+<p>
+Speak directly with Roto Tank Shop and get assistance
+with your tank, drum or septic solution.
+</p>
+
+<div class="big-buttons">
+
+<a href="https://wa.me/254783386550"
+   class="big-btn whatsapp-big">
+   💬 WHATSAPP US
+</a>
+
+<a href="tel:+254783386550"
+   class="big-btn call-big">
+   📞 CALL +254 783 386 550
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
 
-  <div class="container">
+<div class="container">
 
-    <div class="footer-row">
+<div class="footer-inner">
 
-      <a
-        href="#home"
-        class="logo">
+<div>
+  <img src="assets/images/logo.png"
+       class="footer-logo"
+       alt="Roto Tanks Logo">
 
-        ROTO <span>TANKS</span>
+  <p>Quality Water Storage • Built To Last</p>
+</div>
 
-      </a>
+<div class="footer-links">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
+</div>
 
+</div>
 
-      <div class="footer-links">
+<div class="copyright">
+  © 2026 Roto Tank Shop Kenya. All Rights Reserved.
+</div>
 
-        <a href="#products">
-          Products
-        </a>
-
-        <a href="#why">
-          Why Us
-        </a>
-
-        <a href="#reviews">
-          Reviews
-        </a>
-
-        <a href="#faq">
-          FAQs
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <p class="copy">
-
-      © 2026 Roto Water Tanks.
-      All rights reserved.
-
-    </p>
-
-  </div>
+</div>
 
 </footer>
 
 
+<!-- ================= FLOATING BUTTONS ================= -->
 
-<!-- =====================================================
-     FLOATING WHATSAPP
-     ===================================================== -->
+<div class="floating">
 
-<a
-  href="https://wa.me/254783386550?text=Hello%20Roto%20Water%20Tanks,%20I%20would%20like%20to%20make%20an%20inquiry."
-  class="float-whatsapp"
-  target="_blank"
-  aria-label="WhatsApp Roto Water Tanks">
-
-  💬
-
+<a href="https://wa.me/254783386550"
+   class="float float-whatsapp"
+   aria-label="WhatsApp">
+   💬
 </a>
 
+<a href="tel:+254783386550"
+   class="float float-call"
+   aria-label="Call">
+   📞
+</a>
+
+</div>
 
 
-<!-- =====================================================
-     EXISTING JAVASCRIPT
-     ===================================================== -->
+<script>
 
-<script src="js/main.js"></script>
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
 
+menuBtn.addEventListener("click", function(){
+  nav.classList.toggle("mobile-open");
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", function(){
+    nav.classList.remove("mobile-open");
+  });
+});
+
+</script>
 
 </body>
 </html>
