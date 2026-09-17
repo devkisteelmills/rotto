@@ -1,0 +1,1209 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="JO1im4tlOZ5HPkrM_FraqOHcnTTch4OcfLsMkqEtLXY">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"><style>
+
+:root{
+  --roto-blue:#0066a6;
+  --roto-dark:#003b63;
+  --roto-light:#eaf7ff;
+  --roto-cyan:#00a8e8;
+  --white:#ffffff;
+  --dark:#10202d;
+  --gold:#f4b942;
+  --shadow:0 12px 35px rgba(0,45,75,.15);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  color:var(--dark);
+  background:#f7fbfd;
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  box-shadow:0 5px 25px rgba(0,0,0,.10);
+  border-bottom:3px solid var(--roto-blue);
+}
+
+.header-inner{
+  min-height:105px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo img{
+  width:175px;
+  height:auto;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav a{
+  font-weight:700;
+  font-size:14px;
+  color:var(--roto-dark);
+  transition:.3s;
+}
+
+.nav a:hover{
+  color:var(--roto-cyan);
+}
+
+.header-buttons{
+  display:flex;
+  gap:10px;
+}
+
+.header-call,
+.header-whatsapp{
+  padding:12px 18px;
+  border-radius:30px;
+  color:white;
+  font-weight:800;
+  font-size:13px;
+}
+
+.header-call{
+  background:var(--roto-dark);
+}
+
+.header-whatsapp{
+  background:#25D366;
+}
+
+.menu-btn{
+  display:none;
+  font-size:30px;
+  background:none;
+  border:0;
+  color:var(--roto-dark);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:600px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,35,60,.92),rgba(0,65,105,.68),rgba(0,0,0,.20)),
+    url("assets/images/tank1.jpeg") center/cover no-repeat;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  padding:90px 0;
+  max-width:800px;
+}
+
+.hero-label{
+  display:inline-block;
+  background:var(--roto-cyan);
+  padding:9px 18px;
+  border-radius:30px;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.05;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:#64d7ff;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:680px;
+  margin-bottom:32px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 25px;
+  border-radius:8px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:var(--roto-cyan);
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-white{
+  background:white;
+  color:var(--roto-dark);
+}
+
+.btn-whatsapp{
+  background:#25D366;
+  color:white;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description{
+  padding:75px 0;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(239,249,255,.94),rgba(239,249,255,.94)),
+    url("assets/images/tank2.jpeg") center/cover;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  color:var(--roto-dark);
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.15;
+}
+
+.section-title p{
+  margin-top:10px;
+  color:#587080;
+}
+
+.description-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.description-text h3{
+  font-size:27px;
+  color:var(--roto-blue);
+  margin-bottom:15px;
+}
+
+.description-text p{
+  margin-bottom:15px;
+}
+
+.description-image{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:white;
+}
+
+.description-image img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+  padding:80px 0;
+  background:
+    linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.96)),
+    url("assets/images/tank3.jpeg") center/cover fixed;
+}
+
+.category-title{
+  margin:55px 0 25px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.category-title h3{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:var(--roto-dark);
+}
+
+.category-title::after{
+  content:"";
+  height:3px;
+  background:var(--roto-cyan);
+  flex:1;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.product-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 7px 25px rgba(0,50,80,.10);
+  border:1px solid #e2edf3;
+  transition:.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.product-image{
+  height:230px;
+  position:relative;
+  overflow:hidden;
+  background:#edf8fc;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.product-card:hover img{
+  transform:scale(1.05);
+}
+
+.capacity{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:var(--roto-blue);
+  color:white;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.product-body{
+  padding:20px;
+}
+
+.product-body h4{
+  font-size:17px;
+  color:var(--roto-dark);
+  min-height:48px;
+}
+
+.price{
+  color:var(--roto-blue);
+  font-size:21px;
+  font-weight:900;
+  margin:7px 0;
+}
+
+.order-btn{
+  display:block;
+  text-align:center;
+  margin-top:15px;
+  background:var(--roto-dark);
+  color:white;
+  padding:11px;
+  border-radius:7px;
+  font-weight:800;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+  padding:80px 0;
+  background:
+    linear-gradient(rgba(0,51,83,.93),rgba(0,51,83,.93)),
+    url("assets/images/tank4.jpeg") center/cover fixed;
+  color:white;
+}
+
+.reviews .section-title h2{
+  color:white;
+}
+
+.reviews .section-title p{
+  color:#d9edf8;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.review{
+  background:white;
+  color:var(--dark);
+  border-radius:16px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+
+.stars{
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.review p{
+  font-style:italic;
+  margin-bottom:20px;
+}
+
+.reviewer{
+  font-weight:900;
+  color:var(--roto-dark);
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+  padding:80px 0;
+  background:#f0f9fd;
+}
+
+.faq-container{
+  max-width:900px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  margin-bottom:13px;
+  border-radius:10px;
+  box-shadow:0 5px 18px rgba(0,60,90,.08);
+  overflow:hidden;
+}
+
+summary{
+  cursor:pointer;
+  padding:21px;
+  font-weight:800;
+  color:var(--roto-dark);
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary::after{
+  content:"+";
+  float:right;
+  font-size:22px;
+  color:var(--roto-blue);
+}
+
+details[open] summary::after{
+  content:"−";
+}
+
+details p{
+  padding:0 21px 21px;
+  color:#536875;
+}
+
+/* ================= CONTACT ACTIONS ================= */
+
+.contact-actions{
+  padding:80px 0;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(0,51,83,.94),rgba(0,102,166,.94)),
+    url("assets/images/tank5.jpeg") center/cover;
+}
+
+.contact-actions h2{
+  font-family:'Playfair Display',serif;
+  font-size:45px;
+  margin-bottom:12px;
+}
+
+.contact-actions p{
+  margin-bottom:30px;
+}
+
+.big-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.big-btn{
+  min-width:240px;
+  padding:18px 28px;
+  border-radius:8px;
+  color:white;
+  font-size:17px;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.call-big{
+  background:#0b4169;
+}
+
+.whatsapp-big{
+  background:#25D366;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  background:#071b29;
+  color:white;
+  padding:45px 0 20px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.footer-logo{
+  width:170px;
+  background:white;
+  border-radius:8px;
+  padding:5px;
+}
+
+.footer p{
+  color:#a9c1cf;
+  margin-top:10px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  font-weight:700;
+  color:#d9edf8;
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:30px;
+  padding-top:20px;
+  text-align:center;
+  color:#9eb5c2;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:25px;
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+
+.float-call{
+  background:var(--roto-dark);
+}
+
+.float-whatsapp{
+  background:#25D366;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:950px){
+
+  .nav,
+  .header-buttons{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .description-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .header-inner{
+    min-height:80px;
+  }
+
+  .logo img{
+    width:135px;
+  }
+
+  .hero{
+    min-height:570px;
+  }
+
+  .hero-content{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-image{
+    height:165px;
+  }
+
+  .product-body{
+    padding:13px;
+  }
+
+  .product-body h4{
+    font-size:14px;
+    min-height:auto;
+  }
+
+  .price{
+    font-size:17px;
+  }
+
+  .order-btn{
+    font-size:12px;
+    padding:9px;
+  }
+
+  .category-title h3{
+    font-size:25px;
+  }
+
+  .contact-actions h2{
+    font-size:34px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+/* ================= MOBILE MENU ================= */
+
+@media(max-width:950px){
+
+  .nav.mobile-open{
+    display:flex;
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+  }
+
+  .nav.mobile-open a{
+    padding:10px;
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+</style></head><body><!-- ================= HEADER ================= --><header class="header">
+  <div class="container header-inner"><a href="#home" class="logo">
+  <img src="assets/images/logo.png" alt="Roto Tanks Logo">
+</a>
+
+<nav class="nav" id="nav">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="header-buttons">
+  <a href="tel:+254783386550" class="header-call">CALL</a>
+  <a href="https://wa.me/254783386550" class="header-whatsapp">WHATSAPP</a>
+</div>
+
+<button class="menu-btn" id="menuBtn">☰</button>
+
+  </div>
+</header><!-- ================= HERO ================= --><section class="hero" id="home">  <div class="container hero-content"><div class="hero-label">ROTO TANK SHOP • KENYA</div>
+
+<h1>
+  Quality Water Storage
+  <span>Built To Last.</span>
+</h1>
+
+<p>
+  Premium Roto water tanks, underground tanks, septic tanks,
+  HDPE drums and storage solutions for homes, farms,
+  institutions and businesses across Kenya.
+</p>
+
+<div class="hero-actions">
+
+  <a href="#products" class="btn btn-primary">
+    VIEW PRODUCTS
+  </a>
+
+  <a href="https://wa.me/254783386550" class="btn btn-whatsapp">
+    💬 WHATSAPP US
+  </a>
+
+</div>
+
+  </div></section><!-- ================= DESCRIPTION ================= --><section class="description">  <div class="container"><div class="section-title">
+  <h2>ROTO TANK SHOP</h2>
+  <p>Reliable water storage solutions for Kenya</p>
+</div>
+
+<div class="description-grid">
+
+  <div class="description-text">
+
+    <h3>Made Heavier. Built For Longer Life.</h3>
+
+    <p>
+      We supply a wide range of quality Roto water storage
+      products designed for residential, agricultural,
+      commercial and institutional applications.
+    </p>
+
+    <p>
+      Choose from cylindrical water tanks, underground tanks,
+      septic tanks, hopper tanks, silo tanks, trailer tanks,
+      handwash tanks, ball rollers and HDPE drums.
+    </p>
+
+    <p>
+      Our products are available in different capacities,
+      giving you a practical storage solution for almost
+      every requirement.
+    </p>
+
+    <a href="#products" class="btn btn-primary">
+      EXPLORE OUR PRODUCTS
+    </a>
+
+  </div>
+
+  <div class="description-image">
+    <img src="assets/images/tank2.jpeg" alt="Roto Water Tank">
+  </div>
+
+</div>
+
+  </div></section><!-- ================= PRODUCTS ================= --><section class="products" id="products"><div class="container"><div class="section-title">
+  <h2>Our Products & Prices</h2>
+  <p>Quality Roto products at competitive prices</p>
+</div><!-- CYLINDRICAL --><div class="category-title">
+  <h3>Cylindrical Water Tanks</h3>
+</div><div class="product-grid">  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank1.jpeg" alt="1000L Roto Tank">
+      <span class="capacity">1,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>1,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 5,500</div>
+      <a href="https://wa.me/254783386550?text=I%20want%20the%201000L%20Roto%20Tank" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank2.jpeg" alt="2000L Roto Tank">
+      <span class="capacity">2,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>2,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 10,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank3.jpeg" alt="3000L Roto Tank">
+      <span class="capacity">3,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>3,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 13,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank4.jpeg" alt="4000L Roto Tank">
+      <span class="capacity">4,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>4,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 20,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank5.jpeg" alt="5000L Roto Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>5,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 35,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank6.jpeg" alt="6000L Roto Tank">
+      <span class="capacity">6,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>6,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 40,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank7.jpeg" alt="8000L Roto Tank">
+      <span class="capacity">8,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>8,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 50,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank8.jpg" alt="10000L Roto Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>10,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 80,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank9.jpeg" alt="16000L Roto Tank">
+      <span class="capacity">16,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>16,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 158,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank10.jpeg" alt="24000L Roto Tank">
+      <span class="capacity">24,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>24,000 Litres Cylindrical Tank</h4>
+      <div class="price">KSh 214,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article></div><!-- SPECIALTY --><div class="category-title">
+  <h3>Specialty Tanks</h3>
+</div><div class="product-grid">  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank11.png" alt="Hopper Tank">
+      <span class="capacity">4,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Hopper Tank</h4>
+      <div class="price">KSh 84,100</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank12.jpg" alt="Silo Tank">
+      <span class="capacity">1,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Silo Tank</h4>
+      <div class="price">KSh 15,015</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank13.png" alt="Ball Roller">
+      <span class="capacity">90L</span>
+    </div>
+    <div class="product-body">
+      <h4>Ball Roller</h4>
+      <div class="price">KSh 7,650</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank14.jpg" alt="Trailer Tank">
+      <span class="capacity">200L</span>
+    </div>
+    <div class="product-body">
+      <h4>Trailer Tank</h4>
+      <div class="price">KSh 4,550</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank15.png" alt="Ball Handwash">
+      <span class="capacity">60L</span>
+    </div>
+    <div class="product-body">
+      <h4>Ball Handwash</h4>
+      <div class="price">KSh 6,050</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank16.jpg" alt="Cylindrical Tank With Tap">
+      <span class="capacity">60L</span>
+    </div>
+    <div class="product-body">
+      <h4>Cylindrical Tank With Tap – 60L</h4>
+      <div class="price">KSh 4,620</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/tank17.png" alt="Cylindrical Tank With Tap 100L">
+      <span class="capacity">100L</span>
+    </div>
+    <div class="product-body">
+      <h4>Cylindrical Tank With Tap – 100L</h4>
+      <div class="price">KSh 5,060</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article></div><!-- UNDERGROUND --><div class="category-title">
+  <h3>Underground Tanks</h3>
+</div><div class="product-grid">  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground1.webp" alt="2000L Underground Tank">
+      <span class="capacity">2,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 2,000L</h4>
+      <div class="price">KSh 22,215</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground2.webp" alt="5000L Underground Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 5,000L</h4>
+      <div class="price">KSh 55,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground3.webp" alt="10000L Underground Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 10,000L</h4>
+      <div class="price">KSh 95,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/underground4.png" alt="16000L Underground Tank">
+      <span class="capacity">16,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Underground Tank – 16,000L</h4>
+      <div class="price">KSh 146,758</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article></div><!-- SEPTIC --><div class="category-title">
+  <h3>Horizontal Septic Tanks</h3>
+</div><div class="product-grid">  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic1.jpg" alt="3000L Septic Tank">
+      <span class="capacity">3,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 3,000L</h4>
+      <div class="price">KSh 72,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic2.jpg" alt="5000L Septic Tank">
+      <span class="capacity">5,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 5,000L</h4>
+      <div class="price">KSh 98,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/septic3.jpg" alt="10000L Septic Tank">
+      <span class="capacity">10,000L</span>
+    </div>
+    <div class="product-body">
+      <h4>Horizontal Septic Tank – 10,000L</h4>
+      <div class="price">KSh 140,978</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article></div><!-- DRUMS --><div class="category-title">
+  <h3>HDPE Drums</h3>
+</div><div class="product-grid">  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum1.jpeg" alt="310L HDPE Drum">
+      <span class="capacity">310L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 310 Litres</h4>
+      <div class="price">KSh 2,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum2.jpeg" alt="250L HDPE Drum">
+      <span class="capacity">250L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 250 Litres</h4>
+      <div class="price">KSh 1,500</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum3.jpeg" alt="200L HDPE Drum">
+      <span class="capacity">200L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 200 Litres</h4>
+      <div class="price">KSh 1,000</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article>  <article class="product-card">
+    <div class="product-image">
+      <img src="assets/images/drum4.jpeg" alt="210L HDPE Drum">
+      <span class="capacity">210L</span>
+    </div>
+    <div class="product-body">
+      <h4>HDPE Drum – 210 Litres</h4>
+      <div class="price">KSh 1,250</div>
+      <a href="https://wa.me/254783386550" class="order-btn">ORDER NOW</a>
+    </div>
+  </article></div></div>
+</section><!-- ================= REVIEWS ================= --><section class="reviews" id="reviews"><div class="container"><div class="section-title">
+  <h2>What Our Customers Say</h2>
+  <p>Trusted by customers looking for reliable water storage solutions</p>
+</div><div class="review-grid">  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "The tank arrived in good condition and delivery was very smooth.
+      The quality is exactly what I was looking for."
+    </p>
+    <div class="reviewer">— Verified Customer</div>
+  </div>  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "Very helpful service. I was guided on the right tank size
+      for my home and the ordering process was easy."
+    </p>
+    <div class="reviewer">— Happy Customer</div>
+  </div>  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>
+      "Good communication and reliable delivery. I would recommend
+      Roto Tank Shop to anyone looking for a water tank."
+    </p>
+    <div class="reviewer">— Roto Customer</div>
+  </div></div></div></section><!-- ================= FAQ ================= --><section class="faq" id="faq"><div class="container"><div class="section-title">
+  <h2>Frequently Asked Questions</h2>
+  <p>Everything you need to know before ordering</p>
+</div><div class="faq-container"><details>
+  <summary>Do you deliver across Kenya?</summary>
+  <p>
+    Yes. Contact us with your location and the product you need
+    so we can arrange delivery.
+  </p>
+</details><details>
+  <summary>Which tank size should I buy?</summary>
+  <p>
+    The right capacity depends on your household, business,
+    farm or institution's water requirements. Contact us for
+    assistance choosing a suitable size.
+  </p>
+</details><details>
+  <summary>Do you sell underground tanks?</summary>
+  <p>
+    Yes. We supply underground tanks in 2,000L, 5,000L,
+    10,000L and 16,000L capacities.
+  </p>
+</details><details>
+  <summary>Do you sell septic tanks?</summary>
+  <p>
+    Yes. Horizontal septic tanks are available in 3,000L,
+    5,000L and 10,000L capacities.
+  </p>
+</details><details>
+  <summary>Can I order through WhatsApp?</summary>
+  <p>
+    Yes. Click the WhatsApp button and send us the product
+    and capacity you require.
+  </p>
+</details><details>
+  <summary>Are the prices current?</summary>
+  <p>
+    Prices displayed on the website are the listed prices.
+    Please contact us before payment to confirm current
+    availability and delivery charges.
+  </p>
+</details></div></div></section><!-- ================= CALL + WHATSAPP ================= --><section class="contact-actions" id="contact"><div class="container"><h2>Ready To Order?</h2><p>
+Speak directly with Roto Tank Shop and get assistance
+with your tank, drum or septic solution.
+</p><div class="big-buttons"><a href="https://wa.me/254783386550"
+class="big-btn whatsapp-big">
+💬 WHATSAPP US
+</a>
+
+<a href="tel:+254783386550"
+class="big-btn call-big">
+📞 CALL +254 783 386 550
+</a>
+
+</div></div></section><!-- ================= FOOTER ================= --><footer class="footer"><div class="container"><div class="footer-inner"><div>
+  <img src="assets/images/logo.png"
+       class="footer-logo"
+       alt="Roto Tanks Logo">  <p>Quality Water Storage • Built To Last</p>
+</div><div class="footer-links">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
+</div></div><div class="copyright">
+  © 2026 Roto Tank Shop Kenya. All Rights Reserved.
+</div></div></footer><!-- ================= FLOATING BUTTONS ================= --><div class="floating"><a href="https://wa.me/254783386550"
+class="float float-whatsapp"
+aria-label="WhatsApp">
+💬
+</a>
+
+<a href="tel:+254783386550"
+class="float float-call"
+aria-label="Call">
+📞
+</a>
+
+</div><script>
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click", function(){
+  nav.classList.toggle("mobile-open");
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", function(){
+    nav.classList.remove("mobile-open");
+  });
+});
+
+</script></body>
+</html>
